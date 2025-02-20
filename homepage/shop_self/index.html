@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Shop</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header>
+			<h1>ShopSelf</h1>
+
+			<div class="container-icon">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke-width="1.5"
+					stroke="currentColor"
+					class="icon-cart"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+					/>
+				</svg>
+				<div class="count-products">
+					<span id="contador-productos">0</span>
+				</div>
+
+				<div class="container-cart-products hidden-cart">
+					<div class="cart-product">
+						<div class="info-cart-product">
+                            <span class="cantidad-producto-carrito">1</span>
+                            <p class="titulo-producto-carrito">Paracetamol</p>
+                            <span class="precio-producto-carrito">$10</span>
+                        </div>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="icon-close"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M6 18L18 6M6 6l12 12"
+							/>
+						</svg>
+					</div>
+                    <div class="cart-total">
+                        <h3>Total:</h3>
+                        <span class="total-pagar">$200</span>
+                    </div>
+				</div>
+			</div>
+		</header>
+		<div class="container-items">
+			<div class="item">
+				<figure>
+					<img
+						src="https://boticaportugal.com/cdn/shop/products/9342026200_b669a73d-f18b-464c-8f6a-dabc2098cdc7.png?v=1648745438"
+						alt="producto"
+					/>
+				</figure>
+				<div class="info-product">
+					<h2>Paracetamol</h2>
+					<p class="price">$80</p>
+					<button>Add to cart</button>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img
+						src="https://www.plmconnection.com/plmservices/PharmaSearchEngine/Mexico/DEF/SIDEF/400x400/sanfer_loratadina_10mg_tabs_caja10.png"
+						alt="producto"
+					/>
+				</figure>
+				<div class="info-product">
+					<h2>Loratadina</h2>
+					<p class="price">$20</p>
+					<button>Add to cart</button>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img
+						src="https://www.aflofarm.com.pl/media/__sized__/produkt_zdjecia/naproxen-aflofarm-zdjecie-glowne-M2-thumbnail-450x450.png"
+						alt="producto"
+					/>
+				</figure>
+				<div class="info-product">
+					<h2>Naproxen</h2>
+					<p class="price">$50</p>
+					<button>Add to cart</button>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img
+						src="https://chedrauimx.vtexassets.com/arquivos/ids/36460577-800-auto?v=638628048668400000&width=800&height=auto&aspect=true"
+						alt="producto"
+					/>
+				</figure>
+				<div class="info-product">
+					<h2>Iboprufeno</h2>
+					<p class="price">$90</p>
+					<button>Add to cart</button>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img
+						src="https://www.fahorro.com/media/catalog/product/7/5/7501008491966_4.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700"
+						alt="producto"
+					/>
+				</figure>
+				<div class="info-product">
+					<h2>Aspirina</h2>
+					<p class="price">$50</p>
+					<button>Add to cart</button>
+				</div>
+			</div>
+		</div>
+
+        <script src="index.js"></script>
+	</body>
+</html>
