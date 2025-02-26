@@ -1,0 +1,230 @@
+/* Reinicio de estilos básicos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  background-color: #f0f0f0;
+}
+
+/* Contenedor principal (2 columnas) */
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+}
+
+/* =========================
+   COLUMNA IZQUIERDA (50%)
+   ========================= */
+.left-container {
+  width: 50%;
+  background-color: #fff;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Branding: Logo + "HealthSelf" */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 56px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.brand-text {
+  font-family: 'Inter', sans-serif; 
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 30px;
+  color: #02C8BF;
+  letter-spacing: 1px;
+}
+
+/* 
+  Contenedor principal del contenido (título, formulario, etc.)
+  Aumenta el max-width para que los botones e inputs sean más largos
+*/
+.content-container {
+  flex: 1;
+  width: 100%;
+  max-width: 480px; /* Ajusta según lo que desees */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Título */
+.title-container {
+  margin-bottom: 20px;
+}
+.title {
+  font-size: 2rem;
+  color: #000;
+}
+
+/* Formulario */
+.form-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Campo label + input */
+.field-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.field-container label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.field-container input {
+  width: 100%; /* Para ocupar todo el ancho disponible */
+  padding: 12px; /* Aumenta un poco el padding para hacerlo más grande */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Checkbox de términos */
+.terms-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.terms-container input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Botón principal (Signup) */
+.signup-container {
+  margin-bottom: 20px;
+}
+.signup-btn {
+  width: 100%; /* Botón ancho */
+  background-color: #02C8BF;
+  color: #fff;
+  border: none;
+  padding: 14px; /* Un poco más alto */
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.signup-btn:hover {
+  background-color: #008d88;
+}
+
+/* Separador (Or) */
+.divider-container {
+  margin: 10px 0;
+  text-align: center;
+}
+.divider {
+  font-weight: bold;
+  color: #777;
+}
+
+/* ---------------------------
+   Sección Social Login
+   --------------------------- */
+.social-login {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Botones sociales más largos y altos */
+.btn-social {
+  width: 100%; /* Ocupará todo el ancho de .content-container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  
+  padding: 14px 20px;     /* Ajusta para mayor altura/ancho */
+  font-size: 1rem;        /* Un poco más grande la letra */
+  color: #333;
+  cursor: pointer;
+  
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-social:hover {
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-social img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Enlace para iniciar sesión */
+.signin-container {
+  margin-top: 10px;
+  text-align: left;
+}
+.signin-link {
+  font-size: 0.9rem;
+}
+.signin-link a {
+  color: #02C8BF;
+  text-decoration: none;
+}
+.signin-link a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   COLUMNA DERECHA (50%)
+   ========================= */
+.right-container {
+  width: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f8f9;
+}
+
+.right-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Responsive (opcional) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+  .left-container, .right-container {
+    width: 100%;
+    height: auto;
+  }
+}
