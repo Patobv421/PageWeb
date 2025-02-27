@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let texto = document.getElementById("hsrecovery");
     texto.addEventListener("click", function() {
         let autores = ["Alan Quiñones", "Emir Medrano", "David Ibarra", "Derek Martinez"];
+        
         Swal.fire({
             title: 'Esta página fue creada por:',
             html: autores.join('<br>'),
@@ -13,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Función para validar que el email tenga un formato correcto
     function isValidEmail(email) {
-        // Expresión regular básica para validar el correo
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return re.test(email);
     }
@@ -29,19 +29,24 @@ document.addEventListener("DOMContentLoaded", function() {
         if (!isValidEmail(email)) {
             Swal.fire({
                 icon: 'error',
-                title: 'Invalid Email',
-                text: 'Please, enter your valid email',
-                confirmButtonText: 'Accept'
+                title: 'Correo inválido',
+                text: 'Por favor, ingresa un correo electrónico válido.',
+                confirmButtonText: 'Aceptar'
             });
             return;
         }
         
         // Si el correo es válido, muestra la alerta de recuperación
         Swal.fire({
-            title: 'Recovery of account',
-            text: 'Your account recovery has been completed. You will receive an email shortly.',
+            title: 'Recuperación de cuenta',
+            text: 'Se ha realizado la recuperación de tu cuenta. En breve recibirás un correo.',
             icon: 'success',
-            confirmButtonText: 'Accept'
+            confirmButtonText: 'Aceptar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Redirige a login.html después de que el usuario haga clic en "Aceptar"
+                window.location.href = "log in/login.html";
+            }
         });
     });
 });
