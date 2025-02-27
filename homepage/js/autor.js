@@ -3,6 +3,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     texto.addEventListener("click", function() {
         let autores = ["Alan Quiñones", "Emir Medrano", "David Ibarra", "Derek Martinez"];
-        alert("Esta página fue creada por:\n" + autores.join("\n"));
+        
+        Swal.fire({
+            title: 'Esta página fue creada por:',
+            html: autores.join('<br>'),
+            icon: 'info',
+            confirmButtonText: 'Aceptar'
+        });
     });
 });
