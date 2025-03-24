@@ -3,9 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>HealthSelf - Log in</title>
-  <!-- FUENTES:
-       Inter (peso 900) para "HealthSelf"
-       Poppins (peso 400,600) para el resto -->
+  <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link 
@@ -33,31 +31,31 @@
 
         <!-- Formulario -->
         <form class="login-form" method="POST" action="{{ route('login') }}">
-    @csrf
+          @csrf
 
-    <!-- Mostrar errores de validación -->
-    @if ($errors->any())
-        <div class="error-message">
-            @foreach ($errors->all() as $error)
+          <!-- Mostrar errores de validación -->
+          @if ($errors->any())
+            <div class="error-message">
+              @foreach ($errors->all() as $error)
                 <p>{{ $error }}</p>
-            @endforeach
-        </div>
-    @endif
+              @endforeach
+            </div>
+          @endif
 
-    <label for="email">Email address</label>
-    <input type="email" id="email" name="email" placeholder="Enter your email" required />
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required />
 
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password" placeholder="Password" required />
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Password" required />
 
-    <div class="forgot-password">
-        <label for="forgot-password">Forgot your password?</label>
-        <a href="{{ url('recoverypassword') }}"> Change it</a>
-    </div>
+          <div class="forgot-password">
+            <label for="forgot-password">Forgot your password?</label>
+            <!-- Corregido: el enlace va a la ruta con name('recoverypassword') -->
+            <a href="{{ route('recovery') }}">Change it</a>
+          </div>
 
-    <button type="submit" class="login-btn">Login</button>
-</form>
-
+          <button type="submit" class="login-btn">Login</button>
+        </form>
 
         <!-- Palabra "Or" -->
         <div class="separator">Or</div>
