@@ -5,28 +5,55 @@
     <title>HealthSelf Landing</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    {{-- Vite: cargamos nuestros estilos y scripts --}}
+    {{-- Vite: cargamos nuestros estilos y scripts (ajusta si no usas Vite) --}}
     @vite(['resources/css/homepage.css', 'resources/js/autor.js'])
 </head>
 <body>
 
-    <!-- CABECERA -->
+    <!-- COMIENZA HEADER MODIFICADO -->
     <header>
         <div class="logo">
             <img src="{{ asset('images/logo.png') }}" alt="HealthSelf Logo" />
             HealthSelf
         </div>
+
         <nav>
             <a href="#">Shop</a>
             <a href="#">Services</a>
             <a href="#">About Us</a>
             <a href="#">Contact Us</a>
-            <button class="btn-start" onclick="window.location.href='{{ route('register') }}'">
-    Get Started
-</button>
 
+            @guest
+                <!-- Si el usuario NO está logueado, muestra botón de registro -->
+                <button class="btn-start" onclick="window.location.href='{{ route('register') }}'">
+                    Get Started
+                </button>
+            @endguest
+
+            @auth
+                <!-- Contenedor para agrupar la info de usuario, carrito y logout -->
+                <div class="user-nav">
+                    <!-- Ícono de usuario y nombre -->
+                    <div class="user-info">
+                        <img src="{{ asset('images/frame.png') }}" alt="User Icon" class="user-icon" />
+                        <span class="username">{{ Auth::user()->name }}</span>
+                    </div>
+
+                    <!-- Ícono de carrito -->
+                    <div class="cart-icon">
+                        <img src="{{ asset('images/carrito.png') }}" alt="Cart" />
+                    </div>
+
+                    <!-- Botón Logout -->
+                    <form action="{{ route('logout') }}" method="POST" style="display:inline;">
+                        @csrf
+                        <button type="submit" class="btn-logout">Logout</button>
+                    </form>
+                </div>
+            @endauth
         </nav>
     </header>
+    <!-- TERMINA HEADER MODIFICADO -->
 
     <!-- SECCIÓN HERO -->
     <section class="hero">
