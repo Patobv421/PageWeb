@@ -7,6 +7,7 @@
 
     {{-- Vite: cargamos nuestros estilos y scripts (ajusta si no usas Vite) --}}
     @vite(['resources/css/homepage.css', 'resources/js/autor.js'])
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 
@@ -104,7 +105,7 @@
         <div class="hero-content">
             <h1>Health at your fingertips,<br />when you need it.</h1>
             <p>Medical consultations with specialists at your reach.</p>
-            <button class="btn-start" onclick="window.location.href='{{ route('login') }}'">
+            <button class="btn-start" onclick="window.location.href='{{ route('homepage') }}'">
                 Start Now!
             </button>
         </div>
@@ -379,7 +380,7 @@
                     <li>UNIPOLI</li>
                     <li>Health Self PP</li>
                     <li>+52 618 814 15 16</li>
-                    <li>health_self59</li>
+                    <li id="DerechosAutor">health_self59</li>
                 </ul>
             </div>
         </div>

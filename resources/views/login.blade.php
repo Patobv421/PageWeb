@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>HealthSelf - Log in</title>
   <!-- Fuentes -->
+  @vite(['resources/css/login.css', 'resources/js/login.js'])
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link 
@@ -77,14 +78,18 @@
         </div>
 
         <!-- Texto de registro -->
-        <p class="signup-text">
-          Don't have an account? <a href="#">Sign Up</a>
+        <p class="register-link">
+          Don't have an account? <a href="{{ url('/register') }}">Sign Up</a>
         </p>
       </div>
     </div>
-    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <!-- Sección Derecha (50%) -->
-    <div class="right-section">
+    <div class="right-section">    
       <img src="{{ asset('images_login/doc_calar.png') }}" alt="Imagen Médico" class="hero-image" />
     </div>
   </div>

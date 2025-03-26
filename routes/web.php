@@ -30,8 +30,8 @@ Route::view('register', 'register')->name('register');
 Route::match(['get','post'], '/recovery', [SingleViewRecoveryController::class, 'index'])
      ->name('recovery');
 
-// Ruta para vaciar la sesión (útil en pruebas)
+     //Ruta para vaciar la sesión (útil en pruebas)
 Route::get('/debug-flush-session', function() {
-    session()->flush(); // Elimina toda la información de sesión
+ session()->flush(); // Elimina toda la información de sesión
     return 'Sesión vaciada. Vuelve a /recovery para iniciar en step=1';
 });
