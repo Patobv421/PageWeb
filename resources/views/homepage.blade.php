@@ -272,15 +272,15 @@
             <div class="stats">
                 <div class="stat">
                     <strong>500K+</strong>
-                    <span>Patients served</span>
+                    <p>Patients served</p>
                 </div>
                 <div class="stat">
                     <strong>40K+</strong>
-                    <span>Healthcare professionals available</span>
+                    <p>Healthcare professionals available</p>
                 </div>
                 <div class="stat">
                     <strong>5M+</strong>
-                    <span>Online consultations and follow-ups</span>
+                    <p>Online consultations and follow-ups</p>
                 </div>
             </div>
         </div>
