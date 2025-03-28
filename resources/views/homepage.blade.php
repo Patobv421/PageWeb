@@ -5,7 +5,7 @@
     <title>HealthSelf Landing</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    {{-- Vite: cargamos nuestros estilos y scripts --}}
+    {{-- Vite: cargamos nuestros estilos y scripts (ajusta si no usas Vite) --}}
     @vite(['resources/css/homepage.css', 'resources/js/autor.js'])
 </head>
 <body>
@@ -244,15 +244,15 @@
             <div class="stats">
                 <div class="stat">
                     <strong>500K+</strong>
-                    <span>Patients served</span>
+                    <p>Patients served</p>
                 </div>
                 <div class="stat">
                     <strong>40K+</strong>
-                    <span>Healthcare professionals available</span>
+                    <p>Healthcare professionals available</p>
                 </div>
                 <div class="stat">
                     <strong>5M+</strong>
-                    <span>Online consultations and follow-ups</span>
+                    <p>Online consultations and follow-ups</p>
                 </div>
             </div>
         </div>
@@ -352,7 +352,7 @@
                     <li>UNIPOLI</li>
                     <li>Health Self PP</li>
                     <li>+52 618 814 15 16</li>
-                    <li>health_self59</li>
+                    <li id="DerechosAutor">health_self59</li>
                 </ul>
             </div>
         </div>
