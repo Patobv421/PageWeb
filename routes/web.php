@@ -29,6 +29,7 @@ Route::post('/register', [RegisterController::class, 'register']);
 Route::match(['get', 'post'], '/recovery', [SingleViewRecoveryController::class, 'index'])
      ->name('recovery');
 
+
 // routes/web.php
 Route::get('/doctors', function () {
     return view('doctors'); // Esto carga la vista doctors.blade.php
@@ -38,5 +39,8 @@ Route::get('/doctors', function () {
 // Ruta para vaciar la sesión (útil en pruebas)
 Route::get('/debug-flush-session', function () {
     session()->flush(); // Elimina toda la información de sesión
+     //Ruta para vaciar la sesión (útil en pruebas)
+Route::get('/debug-flush-session', function() {
+ session()->flush(); // Elimina toda la información de sesión
     return 'Sesión vaciada. Vuelve a /recovery para iniciar en step=1';
 });

@@ -5,8 +5,12 @@
   <title>HealthSelf Landing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+
   {{-- Vite: cargamos nuestros estilos y scripts (ajusta si no usas Vite) --}}
   @vite(['resources/css/homepage.css', 'resources/js/autor.js'])
+    {{-- Vite: cargamos nuestros estilos y scripts (ajusta si no usas Vite) --}}
+    @vite(['resources/css/homepage.css', 'resources/js/autor.js'])
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 
@@ -62,7 +66,6 @@
       @endauth
     </nav>
   </header>
-
   <!-- SECCIÓN HERO -->
   <section class="hero">
     <!-- FORMA #1 (SVG #1) -->
@@ -80,6 +83,15 @@
         </defs>
       </svg>
     </div>
+        <!-- CONTENIDO HERO (texto y botón) -->
+        <div class="hero-content">
+            <h1>Health at your fingertips,<br />when you need it.</h1>
+            <p>Medical consultations with specialists at your reach.</p>
+            <button class="btn-start" onclick="window.location.href='{{ route('homepage') }}'">
+                Start Now!
+            </button>
+        </div>
+
 
     <!-- FORMA #2 (SVG #2) -->
     <div class="shape-2">
@@ -185,6 +197,7 @@
       </div>
     </div>
 
+
     <div class="services-group">
       <div class="cards-column">
         <!-- Tarjeta #5 -->
@@ -199,6 +212,20 @@
             </p>
             <a class="buy-link" href="#">View details →</a>
           </div>
+            <div class="stats">
+                <div class="stat">
+                    <strong>500K+</strong>
+                    <p>Patients served</p>
+                </div>
+                <div class="stat">
+                    <strong>40K+</strong>
+                    <p>Healthcare professionals available</p>
+                </div>
+                <div class="stat">
+                    <strong>5M+</strong>
+                    <p>Online consultations and follow-ups</p>
+                </div>
+            </div>
         </div>
 
         <!-- Tarjeta #6 -->
@@ -333,6 +360,18 @@
       </div>
     </div>
   </footer>
+            <!-- Columna 4: Contact Us -->
+            <div class="footer-col contact-col">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>UNIPOLI</li>
+                    <li>Health Self PP</li>
+                    <li>+52 618 814 15 16</li>
+                    <li id="DerechosAutor">health_self59</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
