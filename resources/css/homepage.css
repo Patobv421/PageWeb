@@ -56,6 +56,57 @@ nav a:hover {
   font-size: 18px;
 }
 
+/* ÍCONOS DE USUARIO, CARRITO Y LOGOUT */
+.icon-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.username {
+  font-size: 18px;
+  color: #fff;
+}
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  color: #02C8BF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+.icon-circle:hover {
+  opacity: 0.8;
+}
+.icon-circle svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+.btn-logout {
+  background-color: transparent;
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+.btn-logout:hover {
+  background-color: #fff;
+  color: #02C8BF;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
 /* HERO */
 .hero {
   position: relative;
@@ -173,12 +224,21 @@ nav a:hover {
   color: #555;
   line-height: 1.5;
 }
+/* Botón (enlace) mejorado para redirigir a doctors.blade.php */
 .buy-link {
   display: inline-block;
-  margin-top: 10px;
-  color: #02C8BF;
+  padding: 12px 24px;
+  background-color: #02C8BF;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 10px;
+}
+.buy-link:hover {
+  background-color: #00B3B8;
+  transform: scale(1.03);
 }
 
 /* SECCIÓN "WHY HEALTHSELF" (FONDO TURQUESA) */
@@ -331,129 +391,80 @@ footer.footer {
 /* MEDIA QUERIES (MÓVILES) */
 @media (max-width: 768px) {
   header {
-      flex-direction: column;
-      padding: 20px;
+    flex-direction: column;
+    padding: 20px;
   }
   nav {
-      flex-direction: column;
-      gap: 15px;
+    flex-direction: column;
+    gap: 15px;
   }
   .hero-content {
-      max-width: 100%;
-      padding: 120px 20px;
-      text-align: center;
+    max-width: 100%;
+    padding: 120px 20px;
+    text-align: center;
   }
   .hero-content h1 {
-      font-size: 40px;
+    font-size: 40px;
   }
   .hero-content p {
-      font-size: 16px;
+    font-size: 16px;
   }
   .btn-main {
-      font-size: 16px;
-      padding: 12px 25px;
+    font-size: 16px;
+    padding: 12px 25px;
   }
   .hero img {
-      position: static;
-      max-width: 120%;
-      margin: 70px auto 0;
-      display: block;
+    position: static;
+    max-width: 120%;
+    margin: 70px auto 0;
+    display: block;
   }
   .services {
-      padding: 40px 20px;
+    padding: 40px 20px;
   }
   .services h2 {
-      font-size: 2em;
+    font-size: 2em;
   }
   .services-group {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
   .image-column img {
-      margin: 0 auto;
+    margin: 0 auto;
   }
   .why-healthself {
-      padding: 60px 20px;
+    padding: 60px 20px;
   }
   .scroll-down {
-      display: none;
+    display: none;
   }
   .why-container h2 {
-      font-size: 1.8em;
+    font-size: 1.8em;
   }
   .why-container p {
-      font-size: 1em;
+    font-size: 1em;
   }
   .stats {
-      gap: 20px;
+    gap: 20px;
   }
   .stat strong {
-      font-size: 1.4em;
+    font-size: 1.4em;
   }
   .our-specialists {
-      padding: 40px 20px;
+    padding: 40px 20px;
   }
   .our-specialists h2 {
-      font-size: 2em;
+    font-size: 2em;
   }
   .specialists-container {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
   .footer-content {
-      grid-template-columns: 1fr 1fr;
-      row-gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
   }
 }
 @media (max-width: 480px) {
   .footer-content {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
-}
-
-/* -------------------- */
-/* NUEVAS CLASES PARA LOS ÍCONOS DE USUARIO, CARRITO Y LOGOUT */
-/* -------------------- */
-
-/* Contenedor que agrupa user-info, carrito y logout */
-.user-nav {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-/* Datos de usuario */
-.user-info {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.user-icon {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-}
-.username {
-  font-size: 18px;
-  color: #fff; /* Nombre en blanco */
-}
-
-/* Ícono de carrito */
-.cart-icon img {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-}
-
-/* Botón Logout */
-.btn-logout {
-  background-color: transparent;
-  border: 1px solid #fff;
-  padding: 8px 16px;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 20px;
-  transition: background-color 0.3s;
-}
-.btn-logout:hover {
-  background-color: rgba(255, 255, 255, 0.2);
 }

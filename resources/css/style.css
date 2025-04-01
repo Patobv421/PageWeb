@@ -1,0 +1,293 @@
+/* --- RESET BÁSICO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Variables */
+  :root {
+    /* Fondo turquesa del header */
+    --main-turquoise: #00C2CB;
+    /* Texto general */
+    --text-color: #333;
+    /* Color dorado para las estrellas */
+    --star-color: #FFC107;
+    /* Fondo del footer */
+    --footer-bg: #00C2CB;
+    /* Color para la línea gris superior del header (si la requieres) */
+    --gray-line: #e5e5e5;
+  }
+  
+  /* --- ESTILOS GENERALES --- */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: var(--text-color);
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  /* --- HEADER --- */
+  .header {
+    background-color: var(--main-turquoise);
+    /* Si deseas la línea gris arriba, descomenta:
+       border-top: 4px solid var(--gray-line);
+    */
+    color: #fff;
+  }
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  .logo-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 0.5rem;
+  }
+  .logo-text {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #fff;
+  }
+  
+  /* Menú principal (píldoras blancas con texto turquesa) */
+  .nav-menu {
+    display: flex;
+    gap: 1rem;
+  }
+  .nav-menu .nav-link {
+    background-color: #fff;            /* Fondo blanco */
+    color: var(--main-turquoise);      /* Texto turquesa */
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;               /* Borde redondo para efecto píldora */
+    border: 1px solid var(--main-turquoise);
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .nav-menu .nav-link:hover {
+    background-color: var(--main-turquoise);
+    color: #fff;
+  }
+  
+  /* Íconos (Usuario/Carrito) en círculos blancos */
+  .header-icons {
+    display: flex;
+    gap: 1rem;
+  }
+  .header-icons .icon-btn {
+    background-color: #fff;              /* Círculo blanco */
+    color: var(--main-turquoise);        /* Ícono turquesa */
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  .header-icons .icon-btn:hover {
+    opacity: 0.8; /* Efecto hover sutil */
+  }
+  .header-icons .icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor; /* Toma el color del contenedor (turquesa) */
+  }
+  
+  /* --- MAIN CONTENT --- */
+  .main-content {
+    margin-top: 2rem;
+  }
+  
+  /* Barra de Filtro */
+  .sort-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .sort-label {
+    margin-right: 0.5rem;
+    font-weight: 500;
+  }
+  .sort-select {
+    padding: 0.5rem;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* --- LISTA DE MÉDICOS --- */
+  .doctors-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .doctor-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+  }
+  .doctor-img-container {
+    flex-shrink: 0;
+    margin-right: 1rem;
+  }
+  .doctor-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  .doctor-info {
+    flex: 2;
+    margin-right: 1rem;
+  }
+  .doctor-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  .doctor-specialty {
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+  .doctor-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  .star-icon {
+    color: var(--star-color);
+    font-size: 1rem;
+    margin-right: 0.25rem;
+  }
+  .rating-value {
+    color: #333;
+    font-weight: 500;
+  }
+  .doctor-address {
+    color: #777;
+    line-height: 1.4;
+  }
+  .doctor-distance {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+  .doctor-distance svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.25rem;
+  }
+  
+  /* Botones en la tarjeta */
+  .doctor-actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+  .telehealth-btn,
+  .profile-btn {
+    border: none;
+    border-radius: 4px;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .telehealth-btn {
+    background-color: #fff;
+    color: var(--main-turquoise);
+    border: 2px solid var(--main-turquoise);
+  }
+  .telehealth-btn:hover {
+    background-color: var(--main-turquoise);
+    color: #fff;
+  }
+  .profile-btn {
+    background-color: var(--main-turquoise);
+    color: #fff;
+    border: 2px solid var(--main-turquoise);
+  }
+  .profile-btn:hover {
+    background-color: #00a2ab;
+  }
+  
+  /* --- FOOTER --- */
+  .footer {
+    background-color: var(--footer-bg);
+    color: #fff;
+    margin-top: 2rem;
+    padding: 2rem 1rem;
+  }
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+  .footer-col {
+    flex: 1 1 200px;
+  }
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .footer-logo-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 0.5rem;
+  }
+  .footer-logo-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  .footer-heading {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  .footer-list {
+    list-style: none;
+  }
+  .footer-link {
+    text-decoration: none;
+    color: #fff;
+  }
+  .footer-link:hover {
+    text-decoration: underline;
+  }
+  .divider {
+    margin: 1rem 0;
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.3);
+  }
+  .footer-text {
+    margin-top: 1rem;
+    color: #fff;
+    line-height: 1.4;
+    max-width: 280px;
+  }
+  
