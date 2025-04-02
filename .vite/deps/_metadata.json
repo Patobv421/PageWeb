@@ -1,0 +1,15 @@
+{
+  "hash": "bab82916",
+  "configHash": "9687b981",
+  "lockfileHash": "ee526778",
+  "browserHash": "c41075c9",
+  "optimized": {
+    "sweetalert2": {
+      "src": "../../node_modules/sweetalert2/dist/sweetalert2.esm.all.js",
+      "file": "sweetalert2.js",
+      "fileHash": "b480dde3",
+      "needsInterop": false
+    }
+  },
+  "chunks": {}
+}
