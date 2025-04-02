@@ -40,3 +40,7 @@ Route::get('/debug-flush-session', function () {
     session()->flush(); // Elimina toda la información de sesión
     return 'Sesión vaciada. Vuelve a /recovery para iniciar en step=1';
 });
+
+Route::get('/shop', function () {
+    return view('shop');
+});
