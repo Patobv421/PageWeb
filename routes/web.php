@@ -57,71 +57,15 @@ Route::get('/index', function () {
     return view('shop.index');
 })->name('shop.index');
 
-// Página de Cardiovascular Drugs
-Route::get('/cardiovascular', function () {
-    return view('shop.cardiovascular');
-})->name('categories.cardiovascular');
-
-// Otras categorías
-Route::get('/antimicrobials', function () {
-    return view('shop.antimicrobials');
-})->name('categories.antimicrobials');
-
+// Página de Analgesics
 Route::get('/analgesics', function () {
     return view('shop.analgesics');
 })->name('categories.analgesics');
 
-Route::get('/psychopharmacological', function () {
-    return view('shop.psychopharmacological');
-})->name('categories.psychopharmacological');
-
-Route::get('/gastrointestinal', function () {
-    return view('shop.gastrointestinal-drugs');
-})->name('categories.gastrointestinal');
-
-Route::get('/metabolic', function () {
-    return view('shop.metabolic');
-})->name('categories.metabolic');
-
-// Otras vistas (favoritos, carrito, etc.)
-Route::get('/favorites', function () {
-    return view('shop.favorites');
-})->name('favorites');
-
-Route::get('/cart', function () {
-    return view('shop.cart');
-})->name('cart');
-
-
-// Página principal de la tienda
-Route::get('/index', function () {
-    return view('shop.index');
-})->name('shop.index');
-
-// Página de Cardiovascular Drugs
-Route::get('/cardiovascular', function () {
-    return view('shop.cardiovascular');
-})->name('categories.cardiovascular');
-
-// Página de Antimicrobials
+// Otras rutas de categorías y vistas
 Route::get('/antimicrobials', function () {
     return view('shop.antimicrobials');
 })->name('categories.antimicrobials');
-
-// Página de Favoritos
-Route::get('/favorites', function () {
-    return view('shop.favorites');
-})->name('favorites');
-
-// Página del Carrito / Checkout
-Route::get('/cart', function () {
-    return view('shop.cart');
-})->name('cart');
-
-// Otras categorías (ejemplo)
-Route::get('/analgesics', function () {
-    return view('shop.analgesics');
-})->name('categories.analgesics');
 
 Route::get('/psychopharmacological', function () {
     return view('shop.psychopharmacological');
@@ -138,3 +82,11 @@ Route::get('/gastrointestinal', function () {
 Route::get('/metabolic', function () {
     return view('shop.metabolic');
 })->name('categories.metabolic');
+
+Route::get('/favorites', function () {
+    return view('shop.favorites');
+})->name('favorites');
+
+Route::get('/cart', function () {
+    return view('shop.cart');
+})->name('cart');
