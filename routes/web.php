@@ -53,19 +53,28 @@ Route::get('/perfil', function () {
 
 
 // Página principal de la tienda
-Route::get('/index', function () {
+Route::get('/', function () {
     return view('shop.index');
 })->name('shop.index');
 
-// Página de Analgesics
-Route::get('/analgesics', function () {
-    return view('shop.analgesics');
-})->name('categories.analgesics');
+// Vista de Doctors (donde se muestra el listado)
+Route::get('/doctors', function () {
+    return view('doctors');
+})->name('doctors');
 
-// Otras rutas de categorías y vistas
+// Vista de Perfil (la página a la que redirige "View Profile")
+Route::get('/perfil', function () {
+    return view('perfil');
+})->name('perfil');
+
+// Otras rutas para categorías y vistas
 Route::get('/antimicrobials', function () {
     return view('shop.antimicrobials');
 })->name('categories.antimicrobials');
+
+Route::get('/analgesics', function () {
+    return view('shop.analgesics');
+})->name('categories.analgesics');
 
 Route::get('/psychopharmacological', function () {
     return view('shop.psychopharmacological');

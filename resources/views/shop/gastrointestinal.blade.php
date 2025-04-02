@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gastrointestinal Drugs - HealthSelf</title>
   {{-- Incluye el archivo global de estilos mediante Vite --}}
-  @vite(['resources/css/shop.css'])
+  @vite(['resources/css/shop.css','resources/js/shop.js'])
   <!-- Estilos extra para el contenedor y el Back to Shop -->
   <style>
     .gastrointestinal-container {

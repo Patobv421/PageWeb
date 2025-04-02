@@ -95,7 +95,8 @@
           </div>
           <div class="doctor-actions">
             <button class="telehealth-btn">Offers Telehealth</button>
-            <button class="profile-btn">View Profile</button>
+            <!-- Al hacer clic en "View Profile" se redirige a la página "perfil" -->
+            <a href="{{ route('perfil') }}" class="profile-btn">View Profile</a>
           </div>
         </div>
       </div>
@@ -225,5 +226,6 @@
     </div>
   </footer>
 
+  <script src="{{ asset('js/index.js') }}"></script>
 </body>
 </html>

@@ -43,7 +43,7 @@
       <!-- Sección del Doctor -->
       <div class="doctor-section">
         <div class="doctor-photo">
-          <img src="{{ asset('images/doctor_photo.png') }}" alt="Doctor Photo">
+          <img src="{{ asset('images_doctores/WhatsApp Image 2025-03-08 at 22.18.32_8c875530.png') }}" alt="Doctor Photo">
         </div>
         <div class="doctor-info">
           <div class="doctor-header">
