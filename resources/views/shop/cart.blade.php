@@ -83,6 +83,7 @@
           <span>Total</span>
           <span id="total-value">$16.99</span>
         </div>
+        <!-- Al hacer clic, se llama a submitDeliveryForm -->
         <button class="btn-payment" onclick="submitDeliveryForm()">Complete payment</button>
         <p class="terms-note">
           By completing your purchase, you agree to our <a href="#">Terms & Conditions</a>
@@ -147,7 +148,11 @@
       }
       const method = document.getElementById('delivery-method').value;
       const address = document.getElementById('delivery-address').value;
-      alert('Payment completed!\nDelivery Method: ' + method + '\nAddress: ' + address);
+      
+      // Aquí puedes realizar validaciones adicionales o guardar la información
+      
+      // Una vez completado, redirige a la vista paymethod
+      window.location.href = "{{ route('paymethod') }}";
     }
   </script>
 
@@ -203,7 +208,6 @@
           if (cartProducts[index].quantity > 1) {
             cartProducts[index].quantity--;
           } else {
-            // Si llega a 1 y vuelven a presionar "-", quitamos el producto
             cartProducts.splice(index, 1);
           }
           localStorage.setItem('cartProducts', JSON.stringify(cartProducts));

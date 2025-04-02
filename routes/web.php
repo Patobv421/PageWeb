@@ -52,8 +52,9 @@ Route::get('/perfil', function () {
 
 
 
+
 // Página principal de la tienda
-Route::get('/', function () {
+Route::get('/index', function () {
     return view('shop.index');
 })->name('shop.index');
 
@@ -96,6 +97,14 @@ Route::get('/favorites', function () {
     return view('shop.favorites');
 })->name('favorites');
 
+Route::get('/product-detail', function () {
+    return view('shop.product-detail');
+})->name('product-detail');
+
 Route::get('/cart', function () {
     return view('shop.cart');
 })->name('cart');
+
+Route::get('/paymethod', function () {
+    return view('paymethod');
+})->name('paymethod');
