@@ -44,3 +44,67 @@ Route::get('/debug-flush-session', function () {
 Route::get('/shop', function () {
     return view('shop');
 });
+Route::get('/perfil', function () {
+    return view('perfil');
+});
+
+//nuevas rutaaaaaaaaaas
+
+
+
+
+// Página principal de la tienda
+Route::get('/index', function () {
+    return view('shop.index');
+})->name('shop.index');
+
+// Vista de Doctors (donde se muestra el listado)
+Route::get('/doctors', function () {
+    return view('doctors');
+})->name('doctors');
+
+// Vista de Perfil (la página a la que redirige "View Profile")
+Route::get('/perfil', function () {
+    return view('perfil');
+})->name('perfil');
+
+// Otras rutas para categorías y vistas
+Route::get('/antimicrobials', function () {
+    return view('shop.antimicrobials');
+})->name('categories.antimicrobials');
+
+Route::get('/analgesics', function () {
+    return view('shop.analgesics');
+})->name('categories.analgesics');
+
+Route::get('/psychopharmacological', function () {
+    return view('shop.psychopharmacological');
+})->name('categories.psychopharmacological');
+
+Route::get('/cardiovascular', function () {
+    return view('shop.cardiovascular');
+})->name('categories.cardiovascular');
+
+Route::get('/gastrointestinal', function () {
+    return view('shop.gastrointestinal-drugs');
+})->name('categories.gastrointestinal');
+
+Route::get('/metabolic', function () {
+    return view('shop.metabolic');
+})->name('categories.metabolic');
+
+Route::get('/favorites', function () {
+    return view('shop.favorites');
+})->name('favorites');
+
+Route::get('/product-detail', function () {
+    return view('shop.product-detail');
+})->name('product-detail');
+
+Route::get('/cart', function () {
+    return view('shop.cart');
+})->name('cart');
+
+Route::get('/paymethod', function () {
+    return view('paymethod');
+})->name('paymethod');

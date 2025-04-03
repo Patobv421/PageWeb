@@ -125,7 +125,7 @@
               Buy your medications and medical products quickly and hassle-free.
               Enjoy top-quality service with a provider you can trust.
             </p>
-            <a class="buy-link" href="#">Buy now →</a>
+            <a class="buy-link" href="{{ route('shop.index') }}">Buy now →</a>
           </div>
         </div>
 
