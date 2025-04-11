@@ -33,6 +33,14 @@ Route::match(['get', 'post'], '/recovery', [SingleViewRecoveryController::class,
 Route::get('/doctors', function () {
     return view('doctors'); // Esto carga la vista doctors.blade.php
 })->name('doctors');
+
+Route::get('/profile', function () {
+    return view('profile'); // Esto carga la vista doctors.blade.php
+})->name('profile');
+
+Route::get('/edit_profile', function () {
+    return view('edit_profile'); // Esto carga la vista doctors.blade.php
+})->name('edit_profile');
     
 
 // Ruta para vaciar la sesión (útil en pruebas)
