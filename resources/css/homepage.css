@@ -9,16 +9,22 @@ body {
   background-color: #fff;
   color: #333;
   min-height: 100vh;
+  /* El header fijo se compensa con el margin-top en la sección hero */
 }
 
 /* CABECERA */
 header {
+  position: fixed; /* Fija el header en la parte superior */
+  top: 0;
+  left: 0;
   width: 100%;
+  z-index: 1000;
   background-color: #02C8BF;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 30px 60px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .logo {
   font-size: 32px;
@@ -63,6 +69,7 @@ nav a:hover {
   gap: 20px;
 }
 .user-info {
+  position: relative; /* Para posicionar el dropdown */
   display: flex;
   align-items: center;
   gap: 8px;
@@ -107,8 +114,31 @@ nav a:hover {
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
 }
 
-/* HERO */
+/* DROPDOWN DEL PERFIL */
+.profile-dropdown {
+  position: absolute;
+  top: 60px; /* Ajusta según la altura del icono */
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 10px;
+  display: none;
+  z-index: 2000;
+}
+.profile-dropdown a {
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #333;
+}
+.profile-dropdown a:hover {
+  background-color: #f1f1f1;
+}
+
+/* SECCIÓN HERO */
 .hero {
+  margin-top: 120px;  /* Compensa la altura del header fijo */
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -224,7 +254,6 @@ nav a:hover {
   color: #555;
   line-height: 1.5;
 }
-/* Botón (enlace) mejorado para redirigir a doctors.blade.php */
 .buy-link {
   display: inline-block;
   padding: 12px 24px;
@@ -241,7 +270,7 @@ nav a:hover {
   transform: scale(1.03);
 }
 
-/* SECCIÓN "WHY HEALTHSELF" (FONDO TURQUESA) */
+/* SECCIÓN "WHY HEALTHSELF" */
 .why-healthself {
   background-color: #02C8BF;
   color: #fff;
@@ -347,7 +376,7 @@ nav a:hover {
   cursor: pointer;
 }
 
-/* SECCIÓN FOOTER TURQUESA */
+/* FOOTER */
 footer.footer {
   background-color: #02C8BF;
   color: #fff;
@@ -388,7 +417,7 @@ footer.footer {
   margin-bottom: 15px;
 }
 
-/* MEDIA QUERIES (MÓVILES) */
+/* MEDIA QUERIES */
 @media (max-width: 768px) {
   header {
     flex-direction: column;

@@ -4,8 +4,7 @@
   <meta charset="UTF-8" />
   <title>HealthSelf Landing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  {{-- Vite: cargamos nuestros estilos y scripts (ajusta si no usas Vite) --}}
+  {{-- Vite: cargamos nuestros estilos y scripts --}}
   @vite(['resources/css/homepage.css', 'resources/js/autor.js'])
 </head>
 <body>
@@ -31,34 +30,39 @@
       @endguest
 
       @auth
-      <!-- Contenedor para la información de usuario, carrito y logout -->
-      <div class="icon-nav">
-        <!-- Contenedor para ícono de usuario y nombre -->
-        <div class="user-info">
-          <div class="icon-circle" aria-label="Usuario">
+        <!-- Contenedor para la información de usuario, carrito y logout -->
+        <div class="icon-nav">
+          <!-- Contenedor para ícono de usuario, nombre y menú dropdown -->
+          <div class="user-info">
+            <!-- Icono de perfil (toggle del dropdown) -->
+            <div class="icon-circle profile-icon" aria-label="Usuario">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 12c2.7 0 5-2.3 5-5S14.7 2 12 2 7 4.3 7 7s2.3 5 5 5zm0 2c-3 0-9 1.5-9 4.5V20h18v-1.5c0-3-6-4.5-9-4.5z"/>
+              </svg>
+            </div>
+            <span class="username">{{ Auth::user()->name }}</span>
+            <!-- Menú dropdown oculto inicialmente -->
+            <div class="profile-dropdown">
+              <a href="{{ route('profile') }}">Mis Resultados</a>
+            </div>
+          </div>
+      
+          <!-- Ícono de carrito -->
+          <div class="icon-circle" aria-label="Carrito">
             <svg viewBox="0 0 24 24">
-              <path d="M12 12c2.7 0 5-2.3 5-5S14.7 2 12 2 7 4.3 7 7s2.3 5 5 5zm0 2c-3 0-9 1.5-9 4.5V20h18v-1.5c0-3-6-4.5-9-4.5z"/>
+              <path d="M7 4h10l1 2h3c.6 0 1 .4 1 1s-.4 1-1 1h-1l-2.2 7.3c-.1.3-.4.7-.8.7H8c-.4 
+                       0-.7-.3-.8-.7L5 5H4c-.6 0-1-.4-1-1s.4-1 1-1h3zm0 0l2.2 8h5.6L17 6H7zM7 20
+                       c-1.1 0-1.99-.9-1.99-2S5.9 16 7 16s2 .9 2 2-.9 2-2 2zm10 
+                       0c-1.1 0-1.99-.9-1.99-2S15.9 16 17 16s2 .9 2 2-.9 2-2 2z"/>
             </svg>
           </div>
-          <span class="username">{{ Auth::user()->name }}</span>
+      
+          <!-- Botón Logout -->
+          <form action="{{ route('logout') }}" method="POST" style="display:inline;">
+            @csrf
+            <button type="submit" class="btn-logout">Logout</button>
+          </form>
         </div>
-    
-        <!-- Ícono de carrito -->
-        <div class="icon-circle" aria-label="Carrito">
-          <svg viewBox="0 0 24 24">
-            <path d="M7 4h10l1 2h3c.6 0 1 .4 1 1s-.4 1-1 1h-1l-2.2 7.3c-.1.3-.4.7-.8.7H8c-.4 
-                     0-.7-.3-.8-.7L5 5H4c-.6 0-1-.4-1-1s.4-1 1-1h3zm0 0l2.2 8h5.6L17 6H7zM7 20
-                     c-1.1 0-1.99-.9-1.99-2S5.9 16 7 16s2 .9 2 2-.9 2-2 2zm10 
-                     0c-1.1 0-1.99-.9-1.99-2S15.9 16 17 16s2 .9 2 2-.9 2-2 2z"/>
-          </svg>
-        </div>
-    
-        <!-- Botón Logout -->
-        <form action="{{ route('logout') }}" method="POST" style="display:inline;">
-          @csrf
-          <button type="submit" class="btn-logout">Logout</button>
-        </form>
-      </div>
       @endauth
     </nav>
   </header>
@@ -105,9 +109,16 @@
     <!-- IMAGEN DEL ESTETOSCOPIO -->
     <img src="{{ asset('images/esteloscopio.png') }}" alt="Stethoscope" />
   </section>
-
-  <br><br><br><br><br><br><br><br><br>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
   <!-- SECCIÓN "OUR SERVICES" -->
   <section class="services">
     <h2>Our Services</h2>
@@ -178,7 +189,6 @@
             <p>
               Choose the time that suits you best and avoid long waits with our seamless system.
             </p>
-            <!-- Botón mejorado: redirige a doctors.blade.php -->
             <a class="buy-link" href="{{ route('doctors') }}">Get started →</a>
           </div>
         </div>
